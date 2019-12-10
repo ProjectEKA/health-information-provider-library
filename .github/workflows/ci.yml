@@ -7,10 +7,10 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@master
-      - name: Setup dotnet core 2.2.0
+      - name: Setup dotnet core 2.2.105
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 2.2.0
+          dotnet-version: 2.2.105
       - name: Build with dotnet
         run: dotnet build
       - name: Package the build
