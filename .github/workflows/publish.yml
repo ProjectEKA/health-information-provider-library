@@ -19,4 +19,4 @@ jobs:
       - name: Package the build
         run: dotnet pack
       - name: Publish to Nuget
-        run: dotnet nuget push hip-library/bin/Debug/hip-library.${{ github.ref }}.nupkg -k ${{NUGUT_API_KEY}} -s https://api.nuget.org/v3/index.json
+        run: dotnet nuget push hip-library/bin/Debug/hip-library.${{ github.ref }}.nupkg -k ${{NUGET_API_KEY}} -s https://api.nuget.org/v3/index.json
