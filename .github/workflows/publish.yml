@@ -1,0 +1,26 @@
+name: GitHub Actions
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Setup dotnet core 2.2.105
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 2.2.105
+      - name: Build with dotnet
+        with:
+          dotnet-version: 2.2.105
+        run: dotnet build
+      - name: Package the build
+        with:
+          dotnet-version: 2.2.105
+        run: dotnet pack
+      - name: Publish to Nuget
+        run: dotnet nuget push hip-library/bin/Debug/hip-library.${{ github.ref }}.nupkg -k ${{NUGUT_API_KEY}} -s https://api.nuget.org/v3/index.json
