@@ -1,0 +1,28 @@
+name: GitHub Actions
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Setup dotnet core 2.2
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 2.2
+      - name: Build with dotnet
+        run: dotnet build
+      - name: Package the build
+        run: dotnet pack
+#      - name: Publish to Nuget
+#        run: dotnet nuget push hip-library/bin/Debug/hip-library.1.0.0.nupkg -k oy2nwar2wjpmmhcbowtqdh4piu7nh23uphd75wmozcxfpu -s https://api.nuget.org/v3/index.json
+#  publish:
+#    runs-on: windows-latest
+#    steps:
+#      - name: Setup dotnet core 2.2
+#        uses: actions/setup-dotnet@v1
+#        with:
+#          dotnet-version: 2.2
+
+    
