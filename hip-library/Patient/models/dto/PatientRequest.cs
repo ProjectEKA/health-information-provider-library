@@ -1,10 +1,18 @@
 namespace hip_library.Patient.models.dto
-{
-    public class PatientRequest
-    {
-        private string PhoneNumber { get; set; }
-        private string FirstName { get; set; }
-        private string LastName { get; set; }
-        private string CaseId { get; set; }
-    }
-}
+ {
+     public class PatientRequest
+     {
+         public string PhoneNumber { get; }
+         public string FirstName { get; }
+         public string LastName { get; }
+         public string CaseId { get; }
+ 
+         public PatientRequest(string phoneNumber, string firstName, string lastName, string caseId)
+         {
+             PhoneNumber = phoneNumber;
+             FirstName = firstName;
+             LastName = lastName;
+             CaseId = caseId;
+         }
+     }
+ }
