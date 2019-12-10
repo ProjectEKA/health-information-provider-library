@@ -20,6 +20,6 @@ jobs:
         run: dotnet pack
       - name: Get the version
         id: get_version
-        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+        run: echo ::set-output name=VERSION::${GITHUB_REF}
       - name: Publish to Nuget
         run: dotnet nuget push hip-library/bin/Debug/hip-library.${{ steps.get_version.outputs.VERSION }}.nupkg -k ${{secrets.NUGET_API_KEY}} -s https://api.nuget.org/v3/index.json
