@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace hip_library.Patient.models.domain
 {
@@ -10,8 +11,11 @@ namespace hip_library.Patient.models.domain
         public DateTime BirthDate { get; }
         public Address Address { get; }
         public Contact Contact { get; }
+        public List<Identifier> Identifier { get; }
+        public Organization ManagingOrganization { get; }
 
-        public Patient(string resourceType, string name, string gender, DateTime birthDate, Address address, Contact contact)
+        public Patient(string resourceType, string name, string gender, DateTime birthDate, Address address,
+            Contact contact, List<Identifier> identifier, Organization managingOrganization)
         {
             ResourceType = resourceType;
             Name = name;
@@ -19,6 +23,8 @@ namespace hip_library.Patient.models.domain
             BirthDate = birthDate;
             Address = address;
             Contact = contact;
+            Identifier = identifier;
+            ManagingOrganization = managingOrganization;
         }
     }
 }
