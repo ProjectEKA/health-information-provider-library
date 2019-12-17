@@ -2,14 +2,12 @@ namespace hip_library.Patient.models.domain
 {
     public class Identifier
     {
-        public string Use { get; }
-        public string Type { get; }
+        public string System { get; }
         public string Value { get; }
 
-        public Identifier(string use, string type, string value)
+        public Identifier(string system, string value)
         {
-            Use = use;
-            Type = type;
+            System = system;
             Value = value;
         }
     }
