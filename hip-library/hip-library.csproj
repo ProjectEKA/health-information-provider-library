@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>netcoreapp2.2</TargetFramework>
         <RootNamespace>hip_library</RootNamespace>
-        <Version>1.0.1</Version>
+        <Version>0.0.1</Version>
     </PropertyGroup>
 
 </Project>
