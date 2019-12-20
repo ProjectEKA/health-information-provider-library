@@ -3,16 +3,21 @@ using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 
 namespace hip_library.Patient.models.dto
- {
-     public class DiscoveryResponse
-     {
-         [JsonPropertyName("patients")]
-         [XmlElement("patients")]
-         public IEnumerable<domain.Patient> Patients { get; }
+{
+    public class DiscoveryResponse
+    {
+        [JsonPropertyName("patient")]
+        [XmlElement("patient")]
+        public domain.Patient Patient { get; }
 
-         public DiscoveryResponse(IEnumerable<domain.Patient> patients)
-         {
-             Patients = patients;
-         }
-     }
- }
+        [JsonPropertyName("matchedBy")]
+        [XmlElement("matchedBy")]
+        public IEnumerable<string> MatchedBy { get; }
+
+        public DiscoveryResponse(domain.Patient patient, IEnumerable<string> matchedBy)
+        {
+            Patient = patient;
+            MatchedBy = matchedBy;
+        }
+    }
+}

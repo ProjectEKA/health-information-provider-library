@@ -9,14 +9,14 @@ namespace hip_library.Patient.models.domain
         [XmlElement("referenceNumber")]
         public string ReferenceNumber { get; }
 
-        [JsonPropertyName("description")]
-        [XmlElement("describtion")]
-        public string Description { get; }
-        
-        public CareContext(string referenceNumber, string description)
+        [JsonPropertyName("display")]
+        [XmlElement("display")]
+        public string Display { get; }
+
+        public CareContext(string referenceNumber, string display)
         {
             ReferenceNumber = referenceNumber;
-            Description = description;
+            Display = display;
         }
     }
 }
