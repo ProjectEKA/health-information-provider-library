@@ -7,13 +7,13 @@ using System.Text.Json.Serialization;
      {
          [JsonPropertyName("type")]
          [XmlElement("type")]
-         public string Type { get; }
+         public IdentifierType Type { get; }
  
          [JsonPropertyName("value")]
          [XmlElement("value")]
          public string Value { get; }
  
-         public Identifier(string type, string value)
+         public Identifier(IdentifierType type, string value)
          {
              Type = type;
              Value = value;
