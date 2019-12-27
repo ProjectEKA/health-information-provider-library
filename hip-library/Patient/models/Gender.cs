@@ -1,4 +1,4 @@
-namespace hip_library.Patient.models.dto
+namespace hip_library.Patient.models
 {
     public enum Gender
     {

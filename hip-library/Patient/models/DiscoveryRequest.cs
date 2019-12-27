@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 
-namespace hip_library.Patient.models.dto
+namespace hip_library.Patient.models
 {
     public class DiscoveryRequest
     {

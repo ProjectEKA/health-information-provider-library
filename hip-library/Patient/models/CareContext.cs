@@ -1,10 +1,9 @@
-using System.Collections.Generic;
 using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 
-namespace hip_library.Patient.models.domain
+namespace hip_library.Patient.models
 {
-    public class Patient
+    public class CareContext
     {
         [JsonPropertyName("referenceNumber")]
         [XmlElement("referenceNumber")]
@@ -14,15 +13,10 @@ namespace hip_library.Patient.models.domain
         [XmlElement("display")]
         public string Display { get; }
 
-        [JsonPropertyName("careContexts")]
-        [XmlElement("careContexts")]
-        public IEnumerable<CareContext> CareContexts { get; }
-
-        public Patient(string referenceNumber, string display, IEnumerable<CareContext> careContexts)
+        public CareContext(string referenceNumber, string display)
         {
             ReferenceNumber = referenceNumber;
             Display = display;
-            CareContexts = careContexts;
         }
     }
 }
