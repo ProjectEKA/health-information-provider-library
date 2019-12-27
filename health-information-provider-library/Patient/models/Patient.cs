@@ -16,14 +16,13 @@ namespace hip_library.Patient.models
 
         [JsonPropertyName("careContexts")]
         [XmlElement("careContexts")]
-        public IEnumerable<CareContext> CareContexts { get; }
+        public IEnumerable<CareContextRepresentation> CareContexts { get; }
 
         [JsonPropertyName("matchedBy")]
         [XmlElement("matchedBy")]
         public IEnumerable<string> MatchedBy { get; }
-
-        public Patient(string referenceNumber, string display, IEnumerable<CareContext> careContexts,
-            IEnumerable<string> matchedBy)
+        
+        public Patient(string referenceNumber, string display, IEnumerable<CareContextRepresentation> careContexts, IEnumerable<string> matchedBy)
         {
             ReferenceNumber = referenceNumber;
             Display = display;
