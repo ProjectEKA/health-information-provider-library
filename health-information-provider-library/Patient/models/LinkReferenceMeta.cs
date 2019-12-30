@@ -8,7 +8,7 @@ namespace hip_library.Patient.models.dto
     {
         [JsonPropertyName("linkReferenceMode")]
         [XmlElement("linkReferenceMode")]
-        public LinkReferenceMode LinkReferenceMode { get; }
+        public string LinkReferenceMode { get; }
         
         [JsonPropertyName("value")]
         [XmlElement("value")]
@@ -19,7 +19,7 @@ namespace hip_library.Patient.models.dto
         public String Expiry { get; }
 
 
-        public LinkReferenceMeta(LinkReferenceMode linkReferenceMode, string value, string expiry)
+        public LinkReferenceMeta(string linkReferenceMode, string value, string expiry)
         {
             LinkReferenceMode = linkReferenceMode;
             Value = value;

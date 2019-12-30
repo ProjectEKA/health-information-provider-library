@@ -12,13 +12,13 @@ namespace hip_library.Patient.models.dto
         
         [JsonPropertyName("authenticationType")]
         [XmlElement("authenticationType")]
-        public AuthenticationType AuthenticationType { get; }
+        public string AuthenticationType { get; }
         
         [JsonPropertyName("meta")]
         [XmlElement("meta")]
         public LinkReferenceMeta Meta { get; }
 
-        public PatientLinkReferenceResponse(string linkReferenceNumber, AuthenticationType authenticationType, LinkReferenceMeta meta)
+        public PatientLinkReferenceResponse(string linkReferenceNumber, string authenticationType, LinkReferenceMeta meta)
         {
             LinkReferenceNumber = linkReferenceNumber;
             AuthenticationType = authenticationType;
