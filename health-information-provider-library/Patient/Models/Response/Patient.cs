@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 
-namespace hip_library.Patient.models
+namespace HipLibrary.Patient.Models.Response
 {
     public class Patient
     {
@@ -20,9 +20,10 @@ namespace hip_library.Patient.models
 
         [JsonPropertyName("matchedBy")]
         [XmlElement("matchedBy")]
-        public IEnumerable<string> MatchedBy { get; }
-        
-        public Patient(string referenceNumber, string display, IEnumerable<CareContextRepresentation> careContexts, IEnumerable<string> matchedBy)
+        public IEnumerable<IdentifierType> MatchedBy { get; }
+
+        public Patient(string referenceNumber, string display, IEnumerable<CareContextRepresentation> careContexts,
+            IEnumerable<IdentifierType> matchedBy)
         {
             ReferenceNumber = referenceNumber;
             Display = display;

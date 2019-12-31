@@ -1,17 +1,15 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 
-namespace hip_library.Patient.models.dto
+namespace HipLibrary.Patient.Models.Request
 {
     public class PatientLinkReferenceRequest
     {
         [JsonPropertyName("patientReferenceNumber")]
         [XmlElement("patientReferenceNumber")]
-        public String PatientReferenceNumber { get; }
-        
+        public string PatientReferenceNumber { get; }
+
         [JsonPropertyName("careContexts")]
         [XmlElement("careContexts")]
         public IEnumerable<CareContext> CareContexts { get; }

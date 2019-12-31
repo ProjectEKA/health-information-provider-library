@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 
-namespace hip_library.Patient.models
+namespace HipLibrary.Patient.Models.Request
 {
-    public class DiscoveryRequest
+    public class Patient
     {
+        [JsonPropertyName("id")]
+        [XmlElement("id")]
+        public string Id { get; }
+
         [JsonPropertyName("verifiedIdentifiers")]
         [XmlElement("verifiedIdentifiers")]
         public IEnumerable<Identifier> VerifiedIdentifiers { get; }
@@ -31,14 +35,11 @@ namespace hip_library.Patient.models
         [XmlElement("dateOfBirth")]
         public DateTime DateOfBirth { get; }
 
-        public DiscoveryRequest(
-            IEnumerable<Identifier> verifiedIdentifiers,
-            IEnumerable<Identifier> unverifiedIdentifiers,
-            string firstName,
-            string lastName,
-            Gender gender,
+        public Patient(string id, IEnumerable<Identifier> verifiedIdentifiers,
+            IEnumerable<Identifier> unverifiedIdentifiers, string firstName, string lastName, Gender gender,
             DateTime dateOfBirth)
         {
+            Id = id;
             VerifiedIdentifiers = verifiedIdentifiers;
             UnverifiedIdentifiers = unverifiedIdentifiers;
             FirstName = firstName;
