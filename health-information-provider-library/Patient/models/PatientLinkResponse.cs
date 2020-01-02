@@ -7,17 +7,17 @@ namespace health_information_provider_library.Patient.models
 {
     public class PatientLinkResponse
     {
-        [JsonPropertyName("patientReferenceNumber")]
-        [XmlElement("patientReferenceNumber")]
-        public string PatientReferenceNumber { get; }
+        [JsonPropertyName("referenceNumber")]
+        [XmlElement("referenceNumber")]
+        public string ReferenceNumber { get; }
         
         [JsonPropertyName("careContexts")]
         [XmlElement("careContexts")]
         public IEnumerable<CareContextRepresentation> CareContexts { get; }
 
-        public PatientLinkResponse(string patientReferenceNumber, IEnumerable<CareContextRepresentation> careContexts)
+        public PatientLinkResponse(string referenceNumber, IEnumerable<CareContextRepresentation> careContexts)
         {
-            PatientReferenceNumber = patientReferenceNumber;
+            ReferenceNumber = referenceNumber;
             CareContexts = careContexts;
         }
     }
