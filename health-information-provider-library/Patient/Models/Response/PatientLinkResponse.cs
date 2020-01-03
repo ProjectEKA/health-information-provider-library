@@ -14,9 +14,9 @@ namespace HipLibrary.Patient.Models.Response
         [XmlElement("careContexts")]
         public IEnumerable<CareContextRepresentation> CareContexts { get; }
 
-        public PatientLinkResponse(string patientReferenceNumber, IEnumerable<CareContextRepresentation> careContexts)
+        public PatientLinkResponse(string referenceNumber, IEnumerable<CareContextRepresentation> careContexts)
         {
-            PatientReferenceNumber = patientReferenceNumber;
+            PatientReferenceNumber = referenceNumber;
             CareContexts = careContexts;
         }
     }
