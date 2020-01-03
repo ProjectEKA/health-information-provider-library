@@ -6,9 +6,9 @@ namespace HipLibrary.Patient.Models.Response
 {
     public class PatientLinkReferenceResponse
     {
-        [JsonPropertyName("linkReferenceNumber")]
-        [XmlElement("linkReferenceNumber")]
-        public String LinkReferenceNumber { get; }
+        [JsonPropertyName("referenceNumber")]
+        [XmlElement("referenceNumber")]
+        public String ReferenceNumber { get; }
 
         [JsonPropertyName("authenticationType")]
         [XmlElement("authenticationType")]
@@ -18,10 +18,9 @@ namespace HipLibrary.Patient.Models.Response
         [XmlElement("meta")]
         public LinkReferenceMeta Meta { get; }
 
-        public PatientLinkReferenceResponse(string linkReferenceNumber, string authenticationType,
-            LinkReferenceMeta meta)
+        public PatientLinkReferenceResponse(string referenceNumber, string authenticationType, LinkReferenceMeta meta)
         {
-            LinkReferenceNumber = linkReferenceNumber;
+            ReferenceNumber = referenceNumber;
             AuthenticationType = authenticationType;
             Meta = meta;
         }

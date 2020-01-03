@@ -9,11 +9,11 @@ namespace HipLibrary.Patient.Models.Request
         [JsonPropertyName("consentManagerId")]
         [XmlElement("consentManagerId")]
         public string ConsentManagerId { get; }
-        
+
         [JsonPropertyName("consentManagerUserId")]
         [XmlElement("consentManagerUserId")]
         public string ConsentManagerUserId { get; }
-        
+
         [JsonPropertyName("patientReferenceNumber")]
         [XmlElement("patientReferenceNumber")]
         public string PatientReferenceNumber { get; }
@@ -22,7 +22,8 @@ namespace HipLibrary.Patient.Models.Request
         [XmlElement("careContexts")]
         public IEnumerable<CareContext> CareContexts { get; }
 
-        public PatientLinkReferenceRequest(string consentManagerId, string consentManagerUserId, string patientReferenceNumber, IEnumerable<CareContext> careContexts)
+        public PatientLinkReferenceRequest(string consentManagerId, string consentManagerUserId,
+            string patientReferenceNumber, IEnumerable<CareContext> careContexts)
         {
             ConsentManagerId = consentManagerId;
             ConsentManagerUserId = consentManagerUserId;

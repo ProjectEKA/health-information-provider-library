@@ -5,24 +5,24 @@ namespace HipLibrary.Patient.Models
 {
     public class LinkReferenceMeta
     {
-        [JsonPropertyName("linkReferenceMode")]
-        [XmlElement("linkReferenceMode")]
-        public string LinkReferenceMode { get; }
+        [JsonPropertyName("communicationMedium")]
+        [XmlElement("communicationMedium")]
+        public string CommunicationMedium { get; }
 
-        [JsonPropertyName("value")]
-        [XmlElement("value")]
-        public string Value { get; }
+        [JsonPropertyName("communicationHint")]
+        [XmlElement("communicationHint")]
+        public string CommunicationHint { get; }
 
-        [JsonPropertyName("expiry")]
-        [XmlElement("expiry")]
-        public string Expiry { get; }
+        [JsonPropertyName("communicationExpiry")]
+        [XmlElement("communicationExpiry")]
+        public string CommunicationExpiry { get; }
 
 
-        public LinkReferenceMeta(string linkReferenceMode, string value, string expiry)
+        public LinkReferenceMeta(string communicationMedium, string communicationHint, string communicationExpiry)
         {
-            LinkReferenceMode = linkReferenceMode;
-            Value = value;
-            Expiry = expiry;
+            CommunicationMedium = communicationMedium;
+            CommunicationHint = communicationHint;
+            CommunicationExpiry = communicationExpiry;
         }
     }
 }

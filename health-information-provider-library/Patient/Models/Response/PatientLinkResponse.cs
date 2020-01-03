@@ -6,9 +6,9 @@ namespace HipLibrary.Patient.Models.Response
 {
     public class PatientLinkResponse
     {
-        [JsonPropertyName("patientReferenceNumber")]
-        [XmlElement("patientReferenceNumber")]
-        public string PatientReferenceNumber { get; }
+        [JsonPropertyName("referenceNumber")]
+        [XmlElement("referenceNumber")]
+        public string ReferenceNumber { get; }
 
         [JsonPropertyName("careContexts")]
         [XmlElement("careContexts")]
@@ -16,7 +16,7 @@ namespace HipLibrary.Patient.Models.Response
 
         public PatientLinkResponse(string referenceNumber, IEnumerable<CareContextRepresentation> careContexts)
         {
-            PatientReferenceNumber = referenceNumber;
+            ReferenceNumber = referenceNumber;
             CareContexts = careContexts;
         }
     }
