@@ -1,11 +1,12 @@
 using System;
 using System.Threading.Tasks;
-using hip_library.Patient.models;
+using HipLibrary.Patient.Models.Request;
+using HipLibrary.Patient.Models.Response;
 
-namespace hip_library.Patient
+namespace HipLibrary.Patient
 {
     public interface IDiscovery
     {
-        Task<Tuple<models.Patient, Error>> PatientFor(DiscoveryRequest request);
+        Task<Tuple<DiscoveryResponse, Error>> PatientFor(DiscoveryRequest request);
     }
 }

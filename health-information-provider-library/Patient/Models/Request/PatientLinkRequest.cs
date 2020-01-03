@@ -1,7 +1,7 @@
 using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 
-namespace health_information_provider_library.Patient.models
+namespace HipLibrary.Patient.Models.Request
 {
     public class PatientLinkRequest
     {
@@ -11,8 +11,7 @@ namespace health_information_provider_library.Patient.models
 
         public PatientLinkRequest(string token)
         {
-            this.Token = token;
+            Token = token;
         }
     }
-    
 }

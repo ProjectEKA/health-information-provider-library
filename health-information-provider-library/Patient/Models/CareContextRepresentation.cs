@@ -1,7 +1,7 @@
 using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 
-namespace hip_library.Patient.models
+namespace HipLibrary.Patient.Models
 {
     public class CareContextRepresentation
     {

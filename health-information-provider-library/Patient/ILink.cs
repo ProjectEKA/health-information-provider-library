@@ -1,15 +1,13 @@
 using System;
 using System.Threading.Tasks;
-using health_information_provider_library.Patient.models;
-using hip_library.Patient.models;
-using hip_library.Patient.models.dto;
+using HipLibrary.Patient.Models.Request;
+using HipLibrary.Patient.Models.Response;
 
-namespace hip_library.Patient
+namespace HipLibrary.Patient
 {
     public interface ILink
     {
         Task<Tuple<PatientLinkReferenceResponse, Error>> LinkPatients(PatientLinkReferenceRequest request);
         Task<Tuple<PatientLinkResponse, Error>> VerifyAndLinkCareContext(PatientLinkRequest request);
-        
     }
 }

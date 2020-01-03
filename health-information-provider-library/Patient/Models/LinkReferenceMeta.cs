@@ -1,22 +1,21 @@
-using System;
 using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 
-namespace hip_library.Patient.models.dto
+namespace HipLibrary.Patient.Models
 {
     public class LinkReferenceMeta
     {
         [JsonPropertyName("communicationMedium")]
         [XmlElement("communicationMedium")]
         public string CommunicationMedium { get; }
-        
+
         [JsonPropertyName("communicationHint")]
         [XmlElement("communicationHint")]
-        public String CommunicationHint { get; }
-        
+        public string CommunicationHint { get; }
+
         [JsonPropertyName("communicationExpiry")]
         [XmlElement("communicationExpiry")]
-        public String CommunicationExpiry { get; }
+        public string CommunicationExpiry { get; }
 
 
         public LinkReferenceMeta(string communicationMedium, string communicationHint, string communicationExpiry)
