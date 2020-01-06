@@ -8,11 +8,11 @@ namespace HipLibrary.Patient.Models.Response
     {
         [JsonPropertyName("link")]
         [XmlElement("link")]
-        public LinkReference LinkReference { get; }
+        public LinkReference Link { get; }
 
-        public PatientLinkReferenceResponse(LinkReference linkReference)
+        public PatientLinkReferenceResponse(LinkReference link)
         {
-            LinkReference = linkReference;
+            Link = link;
         }
     }
 }
