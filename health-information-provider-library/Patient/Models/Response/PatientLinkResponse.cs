@@ -6,18 +6,13 @@ namespace HipLibrary.Patient.Models.Response
 {
     public class PatientLinkResponse
     {
-        [JsonPropertyName("referenceNumber")]
-        [XmlElement("referenceNumber")]
-        public string ReferenceNumber { get; }
+        [JsonPropertyName("patient")]
+        [XmlElement("patient")]
+        public LinkPatient Patient { get; }
 
-        [JsonPropertyName("careContexts")]
-        [XmlElement("careContexts")]
-        public IEnumerable<CareContextRepresentation> CareContexts { get; }
-
-        public PatientLinkResponse(string referenceNumber, IEnumerable<CareContextRepresentation> careContexts)
+        public PatientLinkResponse(LinkPatient patient)
         {
-            ReferenceNumber = referenceNumber;
-            CareContexts = careContexts;
+            Patient = patient;
         }
     }
 }

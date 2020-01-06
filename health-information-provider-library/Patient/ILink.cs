@@ -4,10 +4,10 @@ using HipLibrary.Patient.Models.Request;
 using HipLibrary.Patient.Models.Response;
 
 namespace HipLibrary.Patient
-{
+{ 
     public interface ILink
     {
-        Task<Tuple<PatientLinkReferenceResponse, Error>> LinkPatients(PatientLinkReferenceRequest request);
-        Task<Tuple<PatientLinkResponse, Error>> VerifyAndLinkCareContext(PatientLinkRequest request);
+        Task<Tuple<PatientLinkReferenceResponse, ErrorResponse>> LinkPatients(PatientLinkReferenceRequest request);
+        Task<Tuple<PatientLinkResponse, ErrorResponse>> VerifyAndLinkCareContext(PatientLinkRequest request);
     }
 }
