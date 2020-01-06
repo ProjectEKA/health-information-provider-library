@@ -2,7 +2,6 @@ using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 
 namespace HipLibrary.Patient.Models.Request
-
 {
     public class PatientLinkRequest
     {
@@ -11,7 +10,6 @@ namespace HipLibrary.Patient.Models.Request
         public PatientLinkRequest(string token, string linkReferenceNumber)
         {
             Token = token;
-
             LinkReferenceNumber = linkReferenceNumber;
         }
     }
