@@ -8,7 +8,7 @@ namespace HipLibrary.Patient.Models.Response
         [JsonPropertyName("error")]
         [XmlElement("error")]
         public Error Error { get; }
-
+        
         public ErrorResponse(Error error)
         {
             Error = error;

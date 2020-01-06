@@ -13,7 +13,7 @@ namespace HipLibrary.Patient.Models.Request
         [JsonPropertyName("patient")]
         [XmlElement("patient")]
         public Link Patient { get; }
-
+        
         public PatientLinkReferenceRequest(string transactionId, Link patient)
         {
             TransactionId = transactionId;

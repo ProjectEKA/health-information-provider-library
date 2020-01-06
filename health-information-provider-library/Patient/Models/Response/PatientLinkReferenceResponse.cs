@@ -9,7 +9,7 @@ namespace HipLibrary.Patient.Models.Response
         [JsonPropertyName("link")]
         [XmlElement("link")]
         public LinkReference Link { get; }
-
+        
         public PatientLinkReferenceResponse(LinkReference link)
         {
             Link = link;

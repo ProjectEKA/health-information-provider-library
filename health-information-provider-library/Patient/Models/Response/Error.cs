@@ -2,7 +2,7 @@ using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 
 namespace HipLibrary.Patient.Models.Response
-{
+{ 
     public class Error
     {
         [JsonPropertyName("code")]
@@ -11,8 +11,8 @@ namespace HipLibrary.Patient.Models.Response
         
         [JsonPropertyName("message")]
         [XmlElement("message")]
-        public string Message { get; }
-
+        public string Message { get; } 
+        
         public Error(ErrorCode code, string message)
         {
             Code = code;

@@ -2,7 +2,7 @@ using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 
 namespace HipLibrary.Patient.Models.Request
-{
+{ 
     public class CareContext
     {
         [JsonPropertyName("referenceNumber")]

@@ -6,7 +6,6 @@ namespace HipLibrary.Patient.Models.Request
 {
     public class Link
     {
-        
         [JsonPropertyName("consentManagerId")]
         [XmlElement("consentManagerId")]
         public string ConsentManagerId { get; }

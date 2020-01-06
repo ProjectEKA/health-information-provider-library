@@ -3,10 +3,9 @@ using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 
 namespace HipLibrary.Patient.Models.Response
-{
+{ 
     public class LinkPatient
     {
-        
         [JsonPropertyName("referenceNumber")]
         [XmlElement("referenceNumber")]
         public string ReferenceNumber { get; }
