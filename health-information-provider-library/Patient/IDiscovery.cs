@@ -7,6 +7,6 @@ namespace HipLibrary.Patient
 {
     public interface IDiscovery
     {
-        Task<Tuple<DiscoveryResponse, Error>> PatientFor(DiscoveryRequest request);
+        Task<Tuple<DiscoveryResponse, ErrorResponse>> PatientFor(DiscoveryRequest request);
     }
 }
