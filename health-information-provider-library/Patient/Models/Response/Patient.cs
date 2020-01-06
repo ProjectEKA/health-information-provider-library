@@ -20,10 +20,10 @@ namespace HipLibrary.Patient.Models.Response
 
         [JsonPropertyName("matchedBy")]
         [XmlElement("matchedBy")]
-        public IEnumerable<IdentifierType> MatchedBy { get; }
+        public IEnumerable<Match> MatchedBy { get; }
 
         public Patient(string referenceNumber, string display, IEnumerable<CareContextRepresentation> careContexts,
-            IEnumerable<IdentifierType> matchedBy)
+            IEnumerable<Match> matchedBy)
         {
             ReferenceNumber = referenceNumber;
             Display = display;
