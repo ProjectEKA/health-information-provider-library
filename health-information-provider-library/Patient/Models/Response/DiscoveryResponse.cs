@@ -8,15 +8,9 @@ namespace HipLibrary.Patient.Models.Response
         [JsonPropertyName("patient")]
         [XmlElement("patient")]
         public Patient Patient { get; }
-
-        [JsonPropertyName("transactionId")]
-        [XmlElement("transactionId")]
-        public string TransactionId { get; }
-
-        public DiscoveryResponse(Patient patient, string transactionId)
+        public DiscoveryResponse(Patient patient)
         {
             Patient = patient;
-            TransactionId = transactionId;
         }
     }
 }
