@@ -6,6 +6,9 @@ namespace HipLibrary.Patient.Models.Response
         MultiplePatientsFound,
         CareContextNotFound,
         OtpInValid,
-        OtpExpired
+        OtpExpired,
+        OtpGenerationFailed,
+        NoLinkRequestFound,
+        ServerInternalError
     }
 }
