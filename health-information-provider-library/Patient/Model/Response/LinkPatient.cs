@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 
-namespace HipLibrary.Patient.Models.Response
+namespace HipLibrary.Patient.Model.Response
 { 
     public class LinkPatient
     {

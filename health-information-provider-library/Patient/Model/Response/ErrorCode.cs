@@ -1,4 +1,4 @@
-namespace HipLibrary.Patient.Models.Response
+namespace HipLibrary.Patient.Model.Response
 {
     public enum ErrorCode
     {

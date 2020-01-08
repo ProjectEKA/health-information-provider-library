@@ -1,4 +1,4 @@
-namespace HipLibrary.Patient.Models
+namespace HipLibrary.Patient.Model
 {
     public enum Gender
     {
