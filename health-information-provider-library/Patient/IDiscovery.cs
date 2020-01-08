@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
-using HipLibrary.Patient.Models.Request;
-using HipLibrary.Patient.Models.Response;
+using HipLibrary.Patient.Model.Request;
+using HipLibrary.Patient.Model.Response;
 
 namespace HipLibrary.Patient
 {
