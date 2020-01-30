@@ -9,6 +9,7 @@ namespace HipLibrary.Patient.Model.Response
         OtpExpired,
         OtpGenerationFailed,
         NoLinkRequestFound,
-        ServerInternalError
+        ServerInternalError,
+        TransactionIdNotFound
     }
 }
